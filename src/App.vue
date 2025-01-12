@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { nanoid } from 'nanoid/non-secure'
+import { ref } from 'vue';
+import { nanoid } from 'nanoid/non-secure';
 import { useInfiniteScroll } from './useInfiniteScroll';
-import { APIMultipleUsersResponse, APIUser, User } from './crypto-scroll';
+import type { APIMultipleUsersResponse, APIUser, User } from './crypto-scroll';
 
 /**
  * 
@@ -37,7 +37,7 @@ const fetchNUsers = async (n: number): Promise<void> => {
       email: user.email,
       picture: user.picture.large
     }
-  })
+  });
   users.value.push(...result);
 }
 
