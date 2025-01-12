@@ -75,7 +75,7 @@ useInfiniteScroll(observerEl, async () => {
   </div>
   <TransitionGroup name="list" tag="div" class="wrapper">
     <div v-for="user in users" :key="user.id" class="user">
-      <img :src="user.picture" alt="user" class="user__picture">
+      <img :src="user.picture" :alt="user.name" class="user__picture">
       <div class="user__name">
         {{ user.name }}
       </div>
@@ -116,6 +116,7 @@ useInfiniteScroll(observerEl, async () => {
 }
 
 .user__picture {
+  height: 128px;
   border-radius: 50%;
 }
 
